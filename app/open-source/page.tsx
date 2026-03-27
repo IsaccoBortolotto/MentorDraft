@@ -40,14 +40,18 @@ export default function OpenSourcePage() {
                 o fai un fork per la tua istituzione.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="gap-2 h-12 shadow-lg shadow-primary/25">
-                  <Code2 className="h-4 w-4" />
-                  Vedi su GitHub
-                  <ExternalLink className="h-3 w-3" />
+                <Button asChild size="lg" className="gap-2 h-12 shadow-lg shadow-primary/25">
+                  <a href="https://github.com/IsaccoBortolotto/UniMIND" target="_blank" rel="noopener noreferrer">
+                    <Code2 className="h-4 w-4" />
+                    Vedi su GitHub
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
                 </Button>
-                <Button variant="outline" size="lg" className="gap-2 h-12 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50">
-                  <Star className="h-4 w-4" />
-                  Metti una Stella
+                <Button asChild variant="outline" size="lg" className="gap-2 h-12 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50">
+                  <a href="https://github.com/IsaccoBortolotto/UniMIND/stargazers" target="_blank" rel="noopener noreferrer">
+                    <Star className="h-4 w-4" />
+                    Metti una Stella
+                  </a>
                 </Button>
               </div>
             </div>
@@ -274,9 +278,11 @@ export default function OpenSourcePage() {
                 <Button asChild className="shadow-lg shadow-primary/25">
                   <Link href="/tutor">Prova il Tutor</Link>
                 </Button>
-                <Button variant="outline" className="gap-2 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50">
-                  <Code2 className="h-4 w-4" />
-                  Clona Repository
+                <Button asChild variant="outline" className="gap-2 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50">
+                  <a href="https://github.com/IsaccoBortolotto/UniMIND" target="_blank" rel="noopener noreferrer">
+                    <Code2 className="h-4 w-4" />
+                    Clona Repository
+                  </a>
                 </Button>
               </div>
             </div>
