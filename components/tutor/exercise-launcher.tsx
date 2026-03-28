@@ -64,20 +64,23 @@ export function ExerciseLauncher({ selectedCourse, selectedCategory }: ExerciseL
     }
   }
 
-  const handleLaunch = (platform: "gpt" | "gem") => {
+  const handleLaunch = async (platform: "gpt" | "gem") => {
     if (!category?.links) return
     const url = category.links[platform]
     if (!url) return
 
-    if (input.trim()) {
-      const success = copyToClipboard(input.trim())
-      if (success) {
-        setCopied(true)
-        setTimeout(() => setCopied(false), 4000)
-      }
-    }
-
+    // window.open deve essere chiamato sincronamente nel gestore del click
     window.open(url, "_blank", "noopener,noreferrer")
+
+    if (input.trim()) {
+      try {
+        await navigator.clipboard.writeText(input.trim())
+      } catch {
+        copyToClipboard(input.trim())
+      }
+      setCopied(true)
+      setTimeout(() => setCopied(false), 4000)
+    }
   }
 
   if (!isConfigured) {
