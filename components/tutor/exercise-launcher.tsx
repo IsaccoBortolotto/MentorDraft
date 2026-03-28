@@ -4,13 +4,29 @@ import { useState, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
-import { cn } from "@/lib/utils"
-import { courses, suggestedPrompts } from "@/lib/tutor-data"
-import { ImagePlus, X, Bot, Zap, ExternalLink, Check, AlertCircle, Info } from "lucide-react"
+import { courses } from "@/lib/tutor-data"
+import { ImagePlus, X, Bot, Zap, ExternalLink, Check, AlertCircle, Info, Clipboard } from "lucide-react"
 
 interface ExerciseLauncherProps {
   selectedCourse: string | null
   selectedCategory: string | null
+}
+
+function copyToClipboard(text: string): boolean {
+  try {
+    const textarea = document.createElement("textarea")
+    textarea.value = text
+    textarea.style.position = "fixed"
+    textarea.style.opacity = "0"
+    document.body.appendChild(textarea)
+    textarea.focus()
+    textarea.select()
+    const success = document.execCommand("copy")
+    document.body.removeChild(textarea)
+    return success
+  } catch {
+    return false
+  }
 }
 
 export function ExerciseLauncher({ selectedCourse, selectedCategory }: ExerciseLauncherProps) {
@@ -24,23 +40,41 @@ export function ExerciseLauncher({ selectedCourse, selectedCategory }: ExerciseL
   const isConfigured = !!category && category.status === "active"
   const hasContent = !!input.trim() || !!imagePreview
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (!file) return
+  const handleImageFile = (file: File) => {
+    if (!file.type.startsWith("image/")) return
     const reader = new FileReader()
     reader.onloadend = () => setImagePreview(reader.result as string)
     reader.readAsDataURL(file)
   }
 
-  const handleLaunch = async (platform: "gpt" | "gem") => {
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (file) handleImageFile(file)
+  }
+
+  const handlePaste = (e: React.ClipboardEvent) => {
+    const items = e.clipboardData.items
+    for (const item of Array.from(items)) {
+      if (item.type.startsWith("image/")) {
+        e.preventDefault()
+        const file = item.getAsFile()
+        if (file) handleImageFile(file)
+        return
+      }
+    }
+  }
+
+  const handleLaunch = (platform: "gpt" | "gem") => {
     if (!category?.links) return
     const url = category.links[platform]
     if (!url) return
 
     if (input.trim()) {
-      await navigator.clipboard.writeText(input.trim())
-      setCopied(true)
-      setTimeout(() => setCopied(false), 4000)
+      const success = copyToClipboard(input.trim())
+      if (success) {
+        setCopied(true)
+        setTimeout(() => setCopied(false), 4000)
+      }
     }
 
     window.open(url, "_blank", "noopener,noreferrer")
@@ -116,11 +150,12 @@ export function ExerciseLauncher({ selectedCourse, selectedCategory }: ExerciseL
           <Textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Descrivi il circuito, incolla la netlist o il testo del problema..."
+            onPaste={handlePaste}
+            placeholder="Descrivi il circuito, incolla la netlist o il testo del problema... Puoi anche incollare un'immagine con Ctrl+V"
             className="min-h-[180px] resize-none border-primary/25 focus-visible:ring-primary/30"
           />
 
-          {/* Image upload */}
+          {/* Image area */}
           <div className="flex items-center gap-3 flex-wrap">
             <input
               ref={fileInputRef}
@@ -150,23 +185,28 @@ export function ExerciseLauncher({ selectedCourse, selectedCategory }: ExerciseL
                 </p>
               </div>
             ) : (
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={() => fileInputRef.current?.click()}
-                className="gap-2 border-primary/25 hover:bg-primary/10 hover:text-primary hover:border-primary/40"
-              >
-                <ImagePlus className="h-4 w-4" />
-                Carica immagine circuito
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="gap-2 border-primary/25 hover:bg-primary/10 hover:text-primary hover:border-primary/40"
+                >
+                  <ImagePlus className="h-4 w-4" />
+                  Carica immagine
+                </Button>
+                <span className="text-xs text-muted-foreground flex items-center gap-1">
+                  <Clipboard className="h-3 w-3" />
+                  oppure incolla con Ctrl+V nel campo testo
+                </span>
+              </div>
             )}
           </div>
         </div>
 
         {/* Launch section */}
         <div className="space-y-3">
-          {/* Feedback copiato */}
           {copied && (
             <div className="flex items-center gap-2 text-sm text-green-700 bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-800 rounded-lg px-3 py-2">
               <Check className="h-4 w-4 shrink-0" />
