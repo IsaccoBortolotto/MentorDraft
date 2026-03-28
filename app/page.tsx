@@ -5,12 +5,12 @@ import { Badge } from "@/components/ui/badge"
 import {
   ArrowRight,
   Brain,
-  Code2,
   BookOpen,
   ImageIcon,
   MessageSquare,
   Sparkles
 } from "lucide-react"
+import { GithubIcon } from "@/components/icons/github"
 
 export default function HomePage() {
   return (
@@ -28,7 +28,7 @@ export default function HomePage() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 mb-10">
                 <Badge className="bg-primary/15 text-primary hover:bg-primary/20 border border-primary/25 px-4 py-1.5 text-sm font-medium">
-                  <Code2 className="h-3.5 w-3.5 mr-1.5" />
+                  <GithubIcon className="h-3.5 w-3.5 mr-1.5" />
                   Open Source
                 </Badge>
               </div>

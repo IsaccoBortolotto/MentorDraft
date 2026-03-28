@@ -5,8 +5,7 @@ import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { 
-  Code2,
+import {
   GitPullRequest,
   GitBranch,
   FileText,
@@ -19,6 +18,7 @@ import {
   ExternalLink,
   Brain
 } from "lucide-react"
+import { GithubIcon } from "@/components/icons/github"
 
 export default function OpenSourcePage() {
   return (
@@ -32,7 +32,7 @@ export default function OpenSourcePage() {
           <div className="container mx-auto px-4 relative">
             <div className="max-w-3xl mx-auto text-center">
               <div className="h-20 w-20 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-6 shadow-xl shadow-primary/30">
-                <Code2 className="h-10 w-10 text-primary-foreground" />
+                <GithubIcon className="h-10 w-10 text-primary-foreground" />
               </div>
               <h1 className="text-3xl lg:text-4xl font-bold tracking-tight mb-4 text-primary">
                 Open Source
@@ -43,7 +43,7 @@ export default function OpenSourcePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="gap-2 h-12 shadow-lg shadow-primary/25" onClick={() => window.open("https://github.com/IsaccoBortolotto/UniMIND", "_blank")}>
-                  <Code2 className="h-4 w-4" />
+                  <GithubIcon className="h-4 w-4" />
                   Vedi su GitHub
                   <ExternalLink className="h-3 w-3" />
                 </Button>
@@ -277,7 +277,7 @@ export default function OpenSourcePage() {
                   <Link href="/tutor">Prova il Tutor</Link>
                 </Button>
                 <Button variant="outline" className="gap-2 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50" onClick={() => window.open("https://github.com/IsaccoBortolotto/UniMIND", "_blank")}>
-                  <Code2 className="h-4 w-4" />
+                  <GithubIcon className="h-4 w-4" />
                   Clona Repository
                 </Button>
               </div>
