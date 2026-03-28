@@ -36,7 +36,7 @@ export default function ProjectPage() {
                 </h1>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                UniMIND è un&apos;iniziativa open-source per creare tutoring AI accessibile e di alta qualità 
+                MentorDraft è un&apos;iniziativa open-source per creare tutoring AI accessibile e di alta qualità 
                 per studenti di ingegneria. Crediamo che ogni studente meriti una guida personalizzata 
                 quando impara materie tecniche complesse.
               </p>
@@ -66,7 +66,7 @@ export default function ProjectPage() {
                   </div>
                   <h2 className="text-xl font-bold mb-3 text-primary">Contesto Accademico</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    UniMIND nasce come progetto universitario per supportare gli studenti di ingegneria 
+                    MentorDraft nasce come progetto universitario per supportare gli studenti di ingegneria 
                     industriale. La piattaforma è progettata per integrarsi con i percorsi formativi 
                     esistenti, offrendo un supporto complementare allo studio.
                   </p>
@@ -85,7 +85,7 @@ export default function ProjectPage() {
                   Approccio di Risoluzione Guidata
                 </h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
-                  La metodologia UniMIND si basa su principi pedagogici solidi
+                  La metodologia MentorDraft si basa su principi pedagogici solidi
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-6">
@@ -183,7 +183,7 @@ export default function ProjectPage() {
               </h2>
               <div className="prose prose-neutral max-w-none">
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  UniMIND è progettato per espandersi. La nostra architettura supporta l&apos;aggiunta 
+                  MentorDraft è progettato per espandersi. La nostra architettura supporta l&apos;aggiunta 
                   di nuovi corsi, tipologie di esercizi e backend AI senza modifiche sostanziali 
                   alla piattaforma core. Immaginiamo una suite completa di tutor ingegneristici che copra:
                 </p>
@@ -226,7 +226,7 @@ export default function ProjectPage() {
                     <div>
                       <h3 className="text-lg font-semibold mb-2">Stato del Progetto</h3>
                       <p className="text-muted-foreground text-sm leading-relaxed mb-3">
-                        UniMIND è attualmente un prototipo in fase di sviluppo. 
+                        MentorDraft è attualmente un prototipo in fase di sviluppo. 
                         Alcune limitazioni attuali includono:
                       </p>
                       <ul className="space-y-2 text-sm text-muted-foreground">
@@ -260,7 +260,7 @@ export default function ProjectPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-10">
                 <h2 className="text-2xl font-bold tracking-tight mb-3 text-primary">Il Team</h2>
-                <p className="text-muted-foreground">Le persone dietro UniMIND</p>
+                <p className="text-muted-foreground">Le persone dietro MentorDraft</p>
               </div>
               <div className="grid md:grid-cols-3 gap-6">
                 {[
@@ -320,7 +320,7 @@ export default function ProjectPage() {
                 Vuoi contribuire?
               </h2>
               <p className="text-muted-foreground mb-6">
-                UniMIND è open source. Accogliamo contributi da educatori, 
+                MentorDraft è open source. Accogliamo contributi da educatori, 
                 ingegneri e sviluppatori.
               </p>
               <Button asChild variant="outline" className="gap-2 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50">
@@ -340,7 +340,7 @@ export default function ProjectPage() {
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-sm shadow-primary/20">
               <Brain className="h-4 w-4 text-primary-foreground" />
             </div>
-            <span className="font-semibold text-primary">UniMIND</span>
+            <span className="font-semibold text-primary">MentorDraft</span>
           </div>
           Progetto open-source per l&apos;educazione ingegneristica.
         </div>

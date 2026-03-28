@@ -33,7 +33,7 @@ export default function HomePage() {
                 </Badge>
               </div>
               
-              {/* Large UniMIND Logo */}
+              {/* Large MentorDraft Logo */}
               <div className="flex items-center justify-center gap-5 mb-10">
                 <div className="h-24 w-24 lg:h-28 lg:w-28 rounded-3xl bg-primary flex items-center justify-center shadow-2xl shadow-primary/30">
                   <Brain className="h-12 w-12 lg:h-14 lg:w-14 text-primary-foreground" />
@@ -41,7 +41,7 @@ export default function HomePage() {
               </div>
               
               <h1 className="text-6xl lg:text-8xl font-bold tracking-tight mb-8 text-primary">
-                UniMIND
+                MentorDraft
               </h1>
               
               <p className="text-xl lg:text-2xl text-foreground/80 mb-4 font-medium text-balance leading-relaxed">
@@ -141,7 +141,7 @@ export default function HomePage() {
               <div className="h-10 w-10 rounded-xl bg-primary flex items-center justify-center shadow-md shadow-primary/20">
                 <Brain className="h-5 w-5 text-primary-foreground" />
               </div>
-              <span className="font-bold text-lg text-primary">UniMIND</span>
+              <span className="font-bold text-lg text-primary">MentorDraft</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Progetto open source per l&apos;educazione ingegneristica.

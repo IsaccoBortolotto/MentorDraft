@@ -57,7 +57,7 @@ export default function TutorPage() {
 
       <footer className="border-t border-primary/15 py-6 mt-8 bg-primary/[0.03]">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <span className="font-semibold text-primary">UniMIND</span> — Progetto open source per l&apos;educazione ingegneristica.
+          <span className="font-semibold text-primary">MentorDraft</span> — Progetto open source per l&apos;educazione ingegneristica.
         </div>
       </footer>
     </div>

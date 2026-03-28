@@ -38,16 +38,16 @@ export default function OpenSourcePage() {
                 Open Source
               </h1>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                UniMIND è completamente open source. Esplora il codice, contribuisci miglioramenti 
+                MentorDraft è completamente open source. Esplora il codice, contribuisci miglioramenti 
                 o fai un fork per la tua istituzione.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="gap-2 h-12 shadow-lg shadow-primary/25" onClick={() => window.open("https://github.com/IsaccoBortolotto/UniMIND", "_blank")}>
+                <Button size="lg" className="gap-2 h-12 shadow-lg shadow-primary/25" onClick={() => window.open("https://github.com/IsaccoBortolotto/MentorDraft", "_blank")}>
                   <GithubIcon className="h-4 w-4" />
                   Vedi su GitHub
                   <ExternalLink className="h-3 w-3" />
                 </Button>
-                <Button variant="outline" size="lg" className="gap-2 h-12 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50" onClick={() => window.open("https://github.com/IsaccoBortolotto/UniMIND/stargazers", "_blank")}>
+                <Button variant="outline" size="lg" className="gap-2 h-12 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50" onClick={() => window.open("https://github.com/IsaccoBortolotto/MentorDraft/stargazers", "_blank")}>
                   <Star className="h-4 w-4" />
                   Metti una Stella
                 </Button>
@@ -261,7 +261,7 @@ export default function OpenSourcePage() {
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-xl font-bold mb-4 text-primary">Licenza</h2>
               <p className="text-muted-foreground mb-4">
-                UniMIND è rilasciato sotto licenza MIT. Sei libero di usare, modificare 
+                MentorDraft è rilasciato sotto licenza MIT. Sei libero di usare, modificare 
                 e distribuire questo software per qualsiasi scopo.
               </p>
               <Badge className="text-sm bg-primary/10 text-primary border-primary/20 hover:bg-primary/15">Licenza MIT</Badge>
@@ -283,7 +283,7 @@ export default function OpenSourcePage() {
                 <Button asChild className="shadow-lg shadow-primary/25">
                   <Link href="/tutor">Prova il Tutor</Link>
                 </Button>
-                <Button variant="outline" className="gap-2 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50" onClick={() => window.open("https://github.com/IsaccoBortolotto/UniMIND", "_blank")}>
+                <Button variant="outline" className="gap-2 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50" onClick={() => window.open("https://github.com/IsaccoBortolotto/MentorDraft", "_blank")}>
                   <GithubIcon className="h-4 w-4" />
                   Clona Repository
                 </Button>
@@ -299,7 +299,7 @@ export default function OpenSourcePage() {
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-sm shadow-primary/20">
               <Brain className="h-4 w-4 text-primary-foreground" />
             </div>
-            <span className="font-semibold text-primary">UniMIND</span>
+            <span className="font-semibold text-primary">MentorDraft</span>
           </div>
           Progetto open-source per l&apos;educazione ingegneristica.
         </div>

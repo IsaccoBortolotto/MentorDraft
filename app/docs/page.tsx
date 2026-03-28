@@ -24,7 +24,7 @@ export default function DocsPage() {
                 </h1>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Guida all&apos;utilizzo della piattaforma UniMIND.
+                Guida all&apos;utilizzo della piattaforma MentorDraft.
               </p>
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function DocsPage() {
                     <div>
                       <h2 className="text-lg font-bold mb-2 text-primary">Il Progetto</h2>
                       <p className="text-muted-foreground leading-relaxed">
-                        UniMIND nasce con l&apos;idea di creare una piattaforma open source per il tutoraggio
+                        MentorDraft nasce con l&apos;idea di creare una piattaforma open source per il tutoraggio
                         universitario di ingegneria. Attraverso l&apos;utilizzo di modelli AI avanzati, la
                         piattaforma guida gli studenti nella risoluzione passo-passo di esercizi tecnici,
                         favorendo la comprensione profonda dei metodi risolutivi.
@@ -173,7 +173,7 @@ export default function DocsPage() {
 
       <footer className="border-t border-primary/15 py-6 bg-primary/[0.02]">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <span className="font-semibold text-primary">UniMIND</span> — Progetto open source per l&apos;educazione ingegneristica.
+          <span className="font-semibold text-primary">MentorDraft</span> — Progetto open source per l&apos;educazione ingegneristica.
         </div>
       </footer>
     </div>

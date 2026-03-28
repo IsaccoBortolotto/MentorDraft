@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "UniMIND — Tutor AI per Ingegneria",
+  title: "MentorDraft — Tutor AI per Ingegneria",
   description: "Piattaforma open source per la risoluzione guidata di esercizi universitari di ingegneria.",
 };
 

@@ -26,7 +26,7 @@ export function Navigation() {
           <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary shadow-lg shadow-primary/25 transition-transform group-hover:scale-105">
             <Brain className="h-6 w-6 text-primary-foreground" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-primary">UniMIND</span>
+          <span className="text-xl font-bold tracking-tight text-primary">MentorDraft</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -60,7 +60,7 @@ export function Navigation() {
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary shadow-lg shadow-primary/25">
                 <Brain className="h-6 w-6 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-primary">UniMIND</span>
+              <span className="text-xl font-bold tracking-tight text-primary">MentorDraft</span>
             </div>
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
