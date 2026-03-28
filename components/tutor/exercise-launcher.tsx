@@ -24,7 +24,7 @@ export function ExerciseLauncher({ selectedCourse, selectedCategory }: ExerciseL
 
   const course = courses.find(c => c.id === selectedCourse)
   const category = course?.categories.find(c => c.id === selectedCategory)
-  const isConfigured = !!category && category.status === "active"
+  const isConfigured = !!category && (category.status === "active" || category.status === "beta")
 
   const handleImageFile = (file: File) => {
     if (!file.type.startsWith("image/")) return
@@ -116,6 +116,17 @@ export function ExerciseLauncher({ selectedCourse, selectedCategory }: ExerciseL
           </p>
         </div>
 
+        {/* Banner beta */}
+        {category.status === "beta" && (
+          <div className="rounded-xl border border-amber-500/30 bg-amber-500/8 px-4 py-3 flex items-start gap-3">
+            <AlertCircle className="h-4 w-4 text-amber-600 mt-0.5 shrink-0" />
+            <p className="text-sm text-amber-700 leading-relaxed">
+              <span className="font-semibold">Versione Beta</span> — questo tutor è in fase di test.
+              Potrebbero esserci imprecisioni. Il feedback degli studenti è prezioso.
+            </p>
+          </div>
+        )}
+
         {/* Bottoni launch */}
         <div className="grid grid-cols-2 gap-3">
           <Button
@@ -128,10 +139,11 @@ export function ExerciseLauncher({ selectedCourse, selectedCategory }: ExerciseL
           <Button
             onClick={() => handleLaunch("gem")}
             variant="outline"
-            className="gap-2 h-12 border-2 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50"
+            disabled={!category.links?.gem}
+            className="gap-2 h-12 border-2 border-primary/30 hover:bg-primary/10 hover:text-primary hover:border-primary/50 disabled:opacity-40 disabled:cursor-not-allowed"
           >
             <ExternalLink className="h-4 w-4" />
-            Apri in Gemini
+            {category.links?.gem ? "Apri in Gemini" : "Gemini — In arrivo"}
           </Button>
         </div>
 

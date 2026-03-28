@@ -60,7 +60,11 @@ export const courses: Course[] = [
         id: "regime-trifase",
         name: "Regime Trifase",
         description: "Sistemi trifase equilibrati e squilibrati",
-        status: "coming-soon",
+        status: "beta",
+        links: {
+          gpt: "https://chatgpt.com/g/g-69c7c87e3ef881919bd3ee7b420644eb-tutor-circuiti-trifase-2-0",
+          gem: "",
+        },
       },
       {
         id: "regime-variabile",
