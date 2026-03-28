@@ -61,43 +61,50 @@ export default function OpenSourcePage() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="grid sm:grid-cols-3 gap-4">
-                <Card className="hover:border-primary/40 transition-all cursor-pointer border-2 border-primary/15 hover:shadow-md hover:shadow-primary/10">
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-3">
-                      <div className="h-11 w-11 rounded-lg bg-primary flex items-center justify-center shadow-md shadow-primary/20">
-                        <FileText className="h-5 w-5 text-primary-foreground" />
+                <Link href="/docs">
+                  <Card className="hover:border-primary/40 transition-all cursor-pointer border-2 border-primary/15 hover:shadow-md hover:shadow-primary/10 h-full">
+                    <CardContent className="pt-6">
+                      <div className="flex items-center gap-3">
+                        <div className="h-11 w-11 rounded-lg bg-primary flex items-center justify-center shadow-md shadow-primary/20">
+                          <FileText className="h-5 w-5 text-primary-foreground" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold">Documentazione</h3>
+                          <p className="text-sm text-muted-foreground">Guide di utilizzo</p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="font-semibold">Documentazione</h3>
-                        <p className="text-sm text-muted-foreground">Guide di setup e utilizzo</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Link>
 
-                <Card className="hover:border-primary/40 transition-all cursor-pointer border-2 border-primary/15 hover:shadow-md hover:shadow-primary/10">
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-3">
-                      <div className="h-11 w-11 rounded-lg bg-primary flex items-center justify-center shadow-md shadow-primary/20">
-                        <GitPullRequest className="h-5 w-5 text-primary-foreground" />
+                <a href="mailto:bortolottoisacco@gmail.com">
+                  <Card className="hover:border-primary/40 transition-all cursor-pointer border-2 border-primary/15 hover:shadow-md hover:shadow-primary/10 h-full">
+                    <CardContent className="pt-6">
+                      <div className="flex items-center gap-3">
+                        <div className="h-11 w-11 rounded-lg bg-primary flex items-center justify-center shadow-md shadow-primary/20">
+                          <GitPullRequest className="h-5 w-5 text-primary-foreground" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold">Contribuire</h3>
+                          <p className="text-sm text-muted-foreground">Scrivici per collaborare</p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="font-semibold">Contribuire</h3>
-                        <p className="text-sm text-muted-foreground">Come contribuire</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </a>
 
-                <Card className="hover:border-primary/40 transition-all cursor-pointer border-2 border-primary/15 hover:shadow-md hover:shadow-primary/10">
+                <Card className="border-2 border-dashed border-primary/15 opacity-60">
                   <CardContent className="pt-6">
                     <div className="flex items-center gap-3">
-                      <div className="h-11 w-11 rounded-lg bg-primary flex items-center justify-center shadow-md shadow-primary/20">
-                        <Users className="h-5 w-5 text-primary-foreground" />
+                      <div className="h-11 w-11 rounded-lg bg-muted flex items-center justify-center">
+                        <Users className="h-5 w-5 text-muted-foreground" />
                       </div>
                       <div>
-                        <h3 className="font-semibold">Community</h3>
-                        <p className="text-sm text-muted-foreground">Partecipa alle discussioni</p>
+                        <div className="flex items-center gap-2 mb-0.5">
+                          <h3 className="font-semibold text-muted-foreground">Community</h3>
+                          <Badge variant="outline" className="text-[10px] px-1.5 border-primary/20 text-primary/60">In sviluppo</Badge>
+                        </div>
+                        <p className="text-sm text-muted-foreground">Prossimamente</p>
                       </div>
                     </div>
                   </CardContent>
