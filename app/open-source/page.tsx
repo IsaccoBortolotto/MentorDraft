@@ -16,7 +16,7 @@ import {
   Cog,
   Atom,
   ExternalLink,
-  Brain
+  Compass
 } from "lucide-react"
 import { GithubIcon } from "@/components/icons/github"
 
@@ -297,7 +297,7 @@ export default function OpenSourcePage() {
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
           <div className="flex items-center justify-center gap-2 mb-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-sm shadow-primary/20">
-              <Brain className="h-4 w-4 text-primary-foreground" />
+              <Compass className="h-4 w-4 text-primary-foreground" />
             </div>
             <span className="font-semibold text-primary">MentorDraft</span>
           </div>

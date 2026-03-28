@@ -5,7 +5,7 @@ import { Navigation } from "@/components/navigation"
 import { CourseSelector } from "@/components/tutor/course-selector"
 import { CategorySelector } from "@/components/tutor/category-selector"
 import { ExerciseLauncher } from "@/components/tutor/exercise-launcher"
-import { Brain } from "lucide-react"
+import { Compass } from "lucide-react"
 
 export default function TutorPage() {
   const [selectedCourse, setSelectedCourse] = useState<string | null>(null)
@@ -24,7 +24,7 @@ export default function TutorPage() {
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
             <div className="h-12 w-12 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/25">
-              <Brain className="h-6 w-6 text-primary-foreground" />
+              <Compass className="h-6 w-6 text-primary-foreground" />
             </div>
             <div>
               <h1 className="text-2xl lg:text-3xl font-bold tracking-tight text-primary">Tutor AI</h1>

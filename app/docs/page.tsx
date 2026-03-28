@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { Card, CardContent } from "@/components/ui/card"
-import { BookOpen, MousePointerClick, GraduationCap, Brain, Zap } from "lucide-react"
+import { BookOpen, MousePointerClick, GraduationCap, Compass, Zap } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
@@ -39,7 +39,7 @@ export default function DocsPage() {
                 <CardContent className="pt-6">
                   <div className="flex items-start gap-4">
                     <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center shrink-0 shadow-md shadow-primary/20">
-                      <Brain className="h-5 w-5 text-primary-foreground" />
+                      <Compass className="h-5 w-5 text-primary-foreground" />
                     </div>
                     <div>
                       <h2 className="text-lg font-bold mb-2 text-primary">Il Progetto</h2>

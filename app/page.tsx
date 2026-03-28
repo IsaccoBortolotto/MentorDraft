@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import {
   ArrowRight,
-  Brain,
+  Compass,
   BookOpen,
   ImageIcon,
   MessageSquare,
@@ -36,7 +36,7 @@ export default function HomePage() {
               {/* Large MentorDraft Logo */}
               <div className="flex items-center justify-center gap-5 mb-10">
                 <div className="h-24 w-24 lg:h-28 lg:w-28 rounded-3xl bg-primary flex items-center justify-center shadow-2xl shadow-primary/30">
-                  <Brain className="h-12 w-12 lg:h-14 lg:w-14 text-primary-foreground" />
+                  <Compass className="h-12 w-12 lg:h-14 lg:w-14 text-primary-foreground" />
                 </div>
               </div>
               
@@ -115,7 +115,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
               <div className="h-20 w-20 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-8 shadow-xl shadow-primary/25">
-                <Brain className="h-10 w-10 text-primary-foreground" />
+                <Compass className="h-10 w-10 text-primary-foreground" />
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold tracking-tight mb-5 text-primary">
                 Pronto a iniziare?
@@ -139,7 +139,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-xl bg-primary flex items-center justify-center shadow-md shadow-primary/20">
-                <Brain className="h-5 w-5 text-primary-foreground" />
+                <Compass className="h-5 w-5 text-primary-foreground" />
               </div>
               <span className="font-bold text-lg text-primary">MentorDraft</span>
             </div>

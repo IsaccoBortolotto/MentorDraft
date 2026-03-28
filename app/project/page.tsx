@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   ArrowRight,
-  Brain,
+  Compass,
   Target,
   Users,
   BookOpen,
@@ -29,7 +29,7 @@ export default function ProjectPage() {
             <div className="max-w-3xl mx-auto">
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-12 w-12 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/25">
-                  <Brain className="h-6 w-6 text-primary-foreground" />
+                  <Compass className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <h1 className="text-3xl lg:text-4xl font-bold tracking-tight text-primary">
                   Il Progetto
@@ -338,7 +338,7 @@ export default function ProjectPage() {
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
           <div className="flex items-center justify-center gap-2 mb-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shadow-sm shadow-primary/20">
-              <Brain className="h-4 w-4 text-primary-foreground" />
+              <Compass className="h-4 w-4 text-primary-foreground" />
             </div>
             <span className="font-semibold text-primary">MentorDraft</span>
           </div>
