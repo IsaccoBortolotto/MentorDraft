@@ -190,19 +190,11 @@ export default function ProjectPage() {
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-center gap-3">
                     <div className="h-2.5 w-2.5 rounded-full bg-primary shadow-sm"></div>
-                    Fisica: meccanica classica, termodinamica ed elettromagnetismo
+                    Enertronica: conversione dell&apos;energia, elettronica di potenza
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="h-2.5 w-2.5 rounded-full bg-primary shadow-sm"></div>
-                    Meccanica strutturale: statica, dinamica e resistenza dei materiali
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="h-2.5 w-2.5 rounded-full bg-primary shadow-sm"></div>
-                    Elettronica: circuiti analogici, sistemi digitali e elaborazione dei segnali
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="h-2.5 w-2.5 rounded-full bg-primary shadow-sm"></div>
-                    Sistemi di controllo: controllo a feedback e dinamica dei sistemi
+                    Fondamenti di Algebra Lineare: spazi vettoriali, matrici, autovalori
                   </li>
                 </ul>
               </div>

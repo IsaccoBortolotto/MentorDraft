@@ -81,7 +81,7 @@ export function CourseSelector({ selectedCourse, onSelectCourse }: CourseSelecto
                   <Badge variant="outline" className="text-[10px] border-primary/20 text-primary/60">Prossimamente</Badge>
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  Fisica, Meccanica, Elettronica
+                  Enertronica, Fondamenti di Algebra Lineare
                 </p>
               </div>
             </div>

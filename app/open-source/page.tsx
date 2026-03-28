@@ -13,8 +13,6 @@ import {
   Star,
   BookOpen,
   Zap,
-  Cog,
-  Atom,
   ExternalLink,
   Compass
 } from "lucide-react"
@@ -202,10 +200,15 @@ export default function OpenSourcePage() {
                   title="Backend AI Multipli"
                   description="Supporto per GPT, Gemini e modelli custom"
                 />
-                <RoadmapItem 
+                <RoadmapItem
                   status="planned"
-                  title="Modulo di Fisica"
-                  description="Meccanica, termodinamica ed elettromagnetismo"
+                  title="Enertronica"
+                  description="Conversione dell'energia ed elettronica di potenza"
+                />
+                <RoadmapItem
+                  status="planned"
+                  title="Fondamenti di Algebra Lineare"
+                  description="Spazi vettoriali, matrici, sistemi lineari e autovalori"
                 />
                 <RoadmapItem 
                   status="planned"
@@ -230,25 +233,15 @@ export default function OpenSourcePage() {
                 Moduli Futuri
               </h2>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <ModuleCard 
+                <ModuleCard
                   icon={Zap}
-                  title="Elettronica"
+                  title="Enertronica"
                   status="Pianificazione"
                 />
-                <ModuleCard 
-                  icon={Atom}
-                  title="Fisica"
-                  status="Pianificazione"
-                />
-                <ModuleCard 
-                  icon={Cog}
-                  title="Meccanica"
-                  status="Ricerca"
-                />
-                <ModuleCard 
+                <ModuleCard
                   icon={GitBranch}
-                  title="Controlli"
-                  status="Ricerca"
+                  title="Algebra Lineare"
+                  status="Pianificazione"
                 />
               </div>
             </div>
