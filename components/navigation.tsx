@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Brain } from "lucide-react"
+import { Menu, Compass } from "lucide-react"
 import { useState } from "react"
 
 const navLinks = [
@@ -24,7 +24,7 @@ export function Navigation() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary shadow-lg shadow-primary/25 transition-transform group-hover:scale-105">
-            <Brain className="h-6 w-6 text-primary-foreground" />
+            <Compass className="h-6 w-6 text-primary-foreground" />
           </div>
           <span className="text-xl font-bold tracking-tight text-primary">MentorDraft</span>
         </Link>
@@ -58,7 +58,7 @@ export function Navigation() {
           <SheetContent side="right" className="w-[280px] border-l-primary/20">
             <div className="flex items-center gap-3 mb-8 mt-2">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary shadow-lg shadow-primary/25">
-                <Brain className="h-6 w-6 text-primary-foreground" />
+                <Compass className="h-6 w-6 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold tracking-tight text-primary">MentorDraft</span>
             </div>
