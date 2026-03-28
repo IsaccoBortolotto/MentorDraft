@@ -63,7 +63,7 @@ export const courses: Course[] = [
         status: "beta",
         links: {
           gpt: "https://chatgpt.com/g/g-69c7c87e3ef881919bd3ee7b420644eb-tutor-circuiti-trifase-2-0",
-          gem: "",
+          gem: "https://gemini.google.com/gem/1-KlzcpDtRcXyaN8mL7hTNrZgNmd2S_E8?usp=sharing",
         },
       },
       {
