@@ -70,7 +70,11 @@ export const courses: Course[] = [
         id: "regime-variabile",
         name: "Regime Variabile",
         description: "Analisi transitoria RC, RL, RLC",
-        status: "coming-soon",
+        status: "beta",
+        links: {
+          gpt: "https://chatgpt.com/g/g-69c837a2dca88191b4d52360f0836a31-tutor-circuiti-in-regime-variabile-1-0",
+          gem: "",
+        },
       },
     ],
   },
