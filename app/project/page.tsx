@@ -2,9 +2,9 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { 
+import {
   ArrowRight,
-  Brain, 
+  Brain,
   Target,
   Users,
   BookOpen,
@@ -12,7 +12,8 @@ import {
   TrendingUp,
   Zap,
   GraduationCap,
-  AlertTriangle
+  AlertTriangle,
+  ExternalLink
 } from "lucide-react"
 
 export default function ProjectPage() {
@@ -249,6 +250,64 @@ export default function ProjectPage() {
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Team */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-10">
+                <h2 className="text-2xl font-bold tracking-tight mb-3 text-primary">Il Team</h2>
+                <p className="text-muted-foreground">Le persone dietro UniMIND</p>
+              </div>
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  {
+                    name: "Isacco Bortolotto",
+                    role: "Fondatore & Sviluppatore",
+                    degree: "BSc Ingegneria dell'Energia",
+                    linkedin: "https://www.linkedin.com/in/isacco-bortolotto-639853336/",
+                  },
+                  {
+                    name: "Samuele Fraccaro",
+                    role: "Sviluppatore",
+                    degree: "BSc Ingegneria Informatica",
+                    linkedin: "https://www.linkedin.com/in/samuele-fraccaro-a19a48330/",
+                  },
+                  {
+                    name: "Alberto Marin",
+                    role: "Sviluppatore",
+                    degree: "BSc Ingegneria dell'Energia",
+                    linkedin: "https://www.linkedin.com/in/alberto-marin-275372301/",
+                  },
+                ].map((member) => (
+                  <Card key={member.name} className="border-2 border-primary/15 bg-gradient-to-br from-primary/5 to-transparent text-center">
+                    <CardContent className="pt-6 pb-5 flex flex-col items-center gap-3">
+                      <div className="h-14 w-14 rounded-2xl bg-primary flex items-center justify-center shadow-lg shadow-primary/25">
+                        <span className="text-xl font-bold text-primary-foreground">
+                          {member.name.charAt(0)}
+                        </span>
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-base">{member.name}</h3>
+                        <p className="text-sm text-primary font-medium">{member.role}</p>
+                        <p className="text-xs text-muted-foreground mt-1">{member.degree}</p>
+                      </div>
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs text-primary hover:underline font-medium mt-1"
+                      >
+                        LinkedIn
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
